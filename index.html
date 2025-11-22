@@ -137,7 +137,62 @@
     </div>
 </div>
 
+<!-- Task 4 -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="confirmationModalLabel">Inquiry Summary Confirmation</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your inquiry! Please confirm the details below before submission.</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Name:</strong> <span id="modalName"></span></li>
+                    <li class="list-group-item"><strong>Email:</strong> <span id="modalEmail"></span></li>
+                    <li class="list-group-item"><strong>Message:</strong> <span id="modalMessage"></span></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
+                <button type="button" class="btn btn-success" id="modalConfirmButton">Confirm Submission</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Stop the form from submitting normally
+
+        // Retrieve form values
+        const name = document.getElementById('contactName').value;
+        const email = document.getElementById('contactEmail').value;
+        const message = document.getElementById('contactMessage').value;
+
+        // Populate the modal fields
+        document.getElementById('modalName').textContent = name;
+        document.getElementById('modalEmail').textContent = email;
+        document.getElementById('modalMessage').textContent = message;
+
+        // Show the modal
+        const confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+        confirmationModal.show();
+    });
+
+    // Logic for confirming the submission
+    document.getElementById('modalConfirmButton').addEventListener('click', function() {
+        alert('Inquiry Confirmed! Thank you for contacting us.');
+
+        // Hide the modal and reset the form
+        const confirmationModal = bootstrap.Modal.getInstance(document.getElementById('confirmationModal'));
+        confirmationModal.hide();
+        document.getElementById('contactForm').reset();
+    });
+</script>
+
 </body>
 
 </html>

@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Assessment</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body class="bg-success-subtle">
+<body class="bg-body-tertiary">
 <!-- Task 1 -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
         <button class="navbar-toggler me-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft"
                 aria-controls="offcanvasLeft" aria-label="Toggle navigation">
@@ -20,21 +21,20 @@
         <div class="collapse navbar-collapse ms-3" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#home-section">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#about-section">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact-section">Contact</a>
                 </li>
             </ul>
         </div>
-
     </div>
 </nav>
 
-<div class="offcanvas offcanvas-start bg-success-subtle" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+<div class="offcanvas offcanvas-start bg-body-tertiary" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
     <div class="offcanvas-header bg-dark">
         <h5 class="offcanvas-title text-white" id="offcanvasLeftLabel">Navigation</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -42,67 +42,71 @@
     <div class="offcanvas-body">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#home-section">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about-section">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contact-section">Contact</a>
             </li>
         </ul>
     </div>
 </div>
 
-<div class="container mt-5" id="home-section">
+<div class="bg-light shadow-sm" id="home-section">
 
     <!-- Task 2 -->
-    <div class="p-5 mb-5 rounded shadow-lg bg-light">
-        <h1 class="text-center display-4 text-dark">Welcome to the Executive Hotel</h1>
-        <p class="lead text-center text-muted">Luxury stays start here. Explore our rooms or check out our exclusive features.</p>
-        <hr class="my-4">
+    <div class="container">
+        <div class="p-5">
+            <h1 class="text-center display-4 text-dark">Welcome to the Executive Hotel</h1>
+            <p class="lead text-center text-secondary">Luxury stays start here. Explore our rooms or check out our exclusive features.</p>
+        </div>
     </div>
+</div>
 
-    <div class="p-4 rounded shadow mb-5 bg-white" id="booking-options">
-        <h2 class="text-center mb-5">Secure Your Booking: Explore Our Room Tiers</h2>
+<div class="container pt-5">
 
-        <div class="row g-4">
+    <div class="mb-5 pb-5 border-bottom" id="booking-options">
+        <h2 class="text-center mb-5 display-5 text-dark">Secure Your Booking: Explore Our Room Tiers</h2>
+
+        <div class="row g-4 justify-content-center">
 
             <div class="col-12 col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://via.placeholder.com/400x250/C8E6C9/333333?text=Standard+Room" class="card-img-top" alt="Standard Room">
+                <div class="card h-100 shadow border-0">
+                    <img src="Standard.webp" class="card-img-top" alt="Standard Room">
                     <div class="card-body">
                         <h5 class="card-title text-dark">Standard Comfort Room</h5>
                         <p class="card-text">
                             Enjoy essential amenities, comfortable bedding, and complimentary breakfast service. Perfect for short stays.
                         </p>
-                        <a href="#" class="btn btn-dark">Book Now</a>
+                        <a href="#" class="btn btn-dark w-100 mt-2">Book Now</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://via.placeholder.com/400x250/C8E6C9/333333?text=Deluxe+Suite" class="card-img-top" alt="Deluxe Suite">
+                <div class="card h-100 shadow border-0">
+                    <img src="Deluxe.jpg" class="card-img-top" alt="Deluxe Suite">
                     <div class="card-body">
                         <h5 class="card-title text-dark">Deluxe Executive Suite</h5>
                         <p class="card-text">
                             Experience spacious living areas, a private balcony, and access to the executive lounge. Premium features included.
                         </p>
-                        <a href="#" class="btn btn-dark">Book Deluxe</a>
+                        <a href="#" class="btn btn-dark w-100 mt-2">Book Now</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://via.placeholder.com/400x250/C8E6C9/333333?text=Family+Room+Option" class="card-img-top" alt="Family Room">
+                <div class="card h-100 shadow border-0">
+                    <img src="Family.jpg" class="card-img-top" alt="Family Room">
                     <div class="card-body">
                         <h5 class="card-title text-dark">Family Comfort Room</h5>
                         <p class="card-text">
                             A spacious room featuring two connecting beds and ample space for four guests. Includes children's amenity kit.
                         </p>
-                        <a href="#" class="btn btn-dark">Book Family</a>
+                        <a href="#" class="btn btn-dark w-100 mt-2">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -110,10 +114,23 @@
     </div>
 
     <!-- Task 3 -->
-    <div class="row justify-content-center pt-5 pb-5 mb-5" id="contact-section">
-        <div class="col-lg-8 p-5 rounded shadow bg-white">
-            <h2 class="text-center mb-4">Contact Us for Booking Inquiries</h2>
-            <form id="contactForm">
+    <div class="row justify-content-center py-5 mb-5 bg-white rounded shadow" id="about-section">
+        <div class="col-lg-10 p-4">
+            <h2 class="text-center mb-4 display-6 text-dark">About Our Hotel</h2>
+            <p class="lead text-center text-secondary">
+                We are dedicated to providing an unparalleled experience. Our combination of modern design,
+                prime location, and world-class service ensures every guest enjoys a truly luxurious and memorable stay.
+            </p>
+            <p class="text-center">
+                <a href="#" class="btn btn-outline-dark mt-3">Discover Amenities</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center pt-5 pb-5" id="contact-section">
+        <div class="col-lg-8 p-4">
+            <h2 class="text-center mb-4 display-6 text-dark">Contact Us for Booking Inquiries</h2>
+            <form id="contactForm" class="bg-white p-4 rounded shadow-lg border">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="contactName" placeholder="Full Name" required>
                     <label for="contactName">Full Name</label>
@@ -155,7 +172,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
-                <button type="button" class="btn btn-success" id="modalConfirmButton">Confirm Submission</button>
+                <button type="button" class="btn btn-dark" id="modalConfirmButton">Confirm Submission</button>
             </div>
         </div>
     </div>
@@ -167,7 +184,6 @@
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Stop the form from submitting normally
 
-        // Retrieve form values
         const name = document.getElementById('contactName').value;
         const email = document.getElementById('contactEmail').value;
         const message = document.getElementById('contactMessage').value;
@@ -182,11 +198,9 @@
         confirmationModal.show();
     });
 
-    // Logic for confirming the submission
     document.getElementById('modalConfirmButton').addEventListener('click', function() {
         alert('Inquiry Confirmed! Thank you for contacting us.');
 
-        // Hide the modal and reset the form
         const confirmationModal = bootstrap.Modal.getInstance(document.getElementById('confirmationModal'));
         confirmationModal.hide();
         document.getElementById('contactForm').reset();
